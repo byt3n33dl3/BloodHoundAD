@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net462</TargetFramework>
+        <OutputType>library</OutputType>
+        <PackageId>SharpHoundCommon</PackageId>
+        <LangVersion>11</LangVersion>
+        <Authors>Rohan Vazarkar</Authors>
+        <Company>SpecterOps</Company>
+        <PackageDescription>Common library for C# BloodHound enumeration tasks</PackageDescription>
+        <PackageLicenseExpression>GPL-3.0-only</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/BloodHoundAD/SharpHoundCommon</RepositoryUrl>
+        <Version>3.2.0-rc1</Version>
+        <AssemblyName>SharpHoundCommonLib</AssemblyName>
+        <RootNamespace>SharpHoundCommonLib</RootNamespace>
+    </PropertyGroup>
+    <PropertyGroup>
+        <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+        <DebugType>full</DebugType>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="AntiXSS" Version="4.3.0" />
+        <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+    </ItemGroup>
+    <ItemGroup>
+        <Reference Include="System.DirectoryServices" />
+        <Reference Include="System.DirectoryServices.Protocols" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Properties" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\SharpHoundRPC\SharpHoundRPC.csproj" PrivateAssets="All" />
+    </ItemGroup>
+    <PropertyGroup>
+        <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+    </PropertyGroup>
+    <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
+        <ItemGroup>
+            <!-- Filter out unnecessary files -->
+            <_ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')-&gt;WithMetadataValue('PrivateAssets', 'All'))" />
+        </ItemGroup>
+
+        <!-- Print batches for debug purposes -->
+        <Message Text="Batch for .nupkg: ReferenceCopyLocalPaths = @(_ReferenceCopyLocalPaths), ReferenceCopyLocalPaths.DestinationSubDirectory = %(_ReferenceCopyLocalPaths.DestinationSubDirectory) Filename = %(_ReferenceCopyLocalPaths.Filename) Extension = %(_ReferenceCopyLocalPaths.Extension)" Importance="High" Condition="'@(_ReferenceCopyLocalPaths)' != ''" />
+
+        <ItemGroup>
+            <!-- Add file to package with consideration of sub folder. If empty, the root folder is chosen. -->
+            <BuildOutputInPackage Include="@(_ReferenceCopyLocalPaths)" TargetPath="%(_ReferenceCopyLocalPaths.DestinationSubDirectory)" />
+        </ItemGroup>
+    </Target>
+</Project>
