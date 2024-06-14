@@ -1,7 +1,7 @@
-## Better GUI Version of BloodHound
+## Personal GUI Version of BloodHound
 
 <a href="https://github.com/pxcs/BlackMarlinExec/"><p align="center">
-<img width="300" height="300" src="/bin/lang/BloodHound.png">
+<img width="300" height="260" src="bin/src/img/loading_new.gif">
 </p></a>
 
 ## About Active Directory, [BloodHound](https://book.hacktricks.xyz/windows-hardening/active-directory-methodology/bloodhound)
