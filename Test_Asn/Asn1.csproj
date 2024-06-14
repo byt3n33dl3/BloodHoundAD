@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>This package enables ASN1 manipulating.
+The original source code is taken from Thomas Pornin:
+https://github.com/pornin/DDer
+I have added tests, comiled as .Net Standard and packed it as a Nugget.
+The repo of this package is:
+https://github.com/odedshimon/Asn1</Description>
+    <Authors>Oded Shimon</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/odedshimon/Asn1</RepositoryUrl>
+    <PackageId>Asn1DotNet</PackageId>
+    <Version>1.0.4</Version>
+  </PropertyGroup>
+
+</Project>
