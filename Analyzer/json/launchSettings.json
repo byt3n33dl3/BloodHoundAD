@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "blake-the-bloodhound-replicator": {
+      "commandName": "Project",
+      "commandLineArgs": "--file C:\\Users\\ezrab\\Desktop\\20220909105400_BloodHound.zip"
+    }
+  }
+}
