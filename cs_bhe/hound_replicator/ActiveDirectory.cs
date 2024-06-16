@@ -1,4 +1,5 @@
 ﻿using System;
+using BloodHound.Client;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
