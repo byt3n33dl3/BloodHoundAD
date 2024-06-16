@@ -172,6 +172,7 @@ namespace Sharphound.Producers
                 props.AddRange(CommonProperties.CertAbuseProps);
                 props.AddRange(CommonProperties.ObjectPropsProps);
                 props.AddRange(CommonProperties.ContainerProps);
+                props.AddRange(CommonProperties.Dockerprops);
                 props.AddRange(CommonProperties.ACLProps);
             }
 
