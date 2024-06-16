@@ -3,6 +3,7 @@ using System.CommandLine;
 using System.IO;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
+using BloodHound;
 using Newtonsoft.Json.Linq;
 
 namespace Blake;

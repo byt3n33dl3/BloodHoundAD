@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BloodHound;
 using System.Threading.Tasks;
 
 namespace Blake;
