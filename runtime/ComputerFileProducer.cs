@@ -6,6 +6,7 @@ using System.Threading.Channels;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Sharphound.Client;
+using Sharphound2.Client;
 using SharpHoundCommonLib;
 using SharpHoundCommonLib.OutputTypes;
 
