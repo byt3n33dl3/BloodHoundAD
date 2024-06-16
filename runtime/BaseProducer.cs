@@ -99,6 +99,7 @@ namespace Sharphound.Producers
 
                 if ((methods & ResolvedCollectionMethod.LocalAdmin) != 0 ||
                     (methods & ResolvedCollectionMethod.DCOM) != 0 ||
+                    (methods & ResolvedCollectionMethod.LCOM) != 0 ||
                     (methods & ResolvedCollectionMethod.PSRemote) != 0 ||
                     (methods & ResolvedCollectionMethod.RDP) != 0 ||
                     (methods & ResolvedCollectionMethod.LoggedOn) != 0 ||
