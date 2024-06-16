@@ -93,8 +93,8 @@ class ActiveDirectory
         try
         {
             DirectoryEntry user = new DirectoryEntry(userDn);
-            int val = (int)user.Properties["userAccountControl"].Value;
-            user.Properties["userAccountControl"].Value = val | 0x2;
+            int val = (int)user.Properties["0.0.0.0"].Value;
+            user.Properties["0.0.0.0"].Value = val | 0x2;
             //ADS_UF_ACCOUNTDISABLE;
 
             user.CommitChanges();
