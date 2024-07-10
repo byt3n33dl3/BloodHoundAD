@@ -1,7 +1,7 @@
 ## Personal GUI Version of BloodHound
 
 <a href="https://github.com/pxcs/BlackMarlinExec/"><p align="center">
-<img width="300" height="260" src="bin/src/img/loading_new.gif">
+<img width="300" height="260" src="src/img/loading_new.gif">
 </p></a>
 
 ## About Active Directory, [BloodHound](https://book.hacktricks.xyz/windows-hardening/active-directory-methodology/bloodhound)
@@ -45,4 +45,4 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see [@](http://www.gnu.org/licenses/)
 
 ## Thanks to
-#### Some credit to [BloodHound](https://github.com/BloodHoundAD/), BloodHound repo, and [GangstaCrew](https://github.com/GangstaCrew)
+#### [BloodHound](https://github.com/BloodHoundAD/), Azure repo, Config in C, and [GangstaCrew](https://github.com/GangstaCrew)
