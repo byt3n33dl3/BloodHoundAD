@@ -1,7 +1,7 @@
 ## pxcs custom [bloodhound](https://github.com/BloodHoundAD)
 
 <a href="https://github.com/pxcs/BlackMarlinExec/"><p align="center">
-<img width="300" height="260" src="src/img/loading_new.gif">
+<img width="300" height="300" src="src/img/logo-white-transparent.png">
 </p></a>
 
 ## About
