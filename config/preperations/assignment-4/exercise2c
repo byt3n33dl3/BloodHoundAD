@@ -1,0 +1,4 @@
+String representations in C like *char must end with a null terminator
+to indicate the end of a character chain/string.
+Because our studentnumber consists of 7 digits, we have to allocate
+7 characters + 1 character for the null terminator which equals 8.

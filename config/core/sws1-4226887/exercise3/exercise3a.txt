@@ -1,0 +1,7 @@
+* [http://man7.org/linux/man-pages/man4/random.4.html](http://man7.org/linux/man-pages/man4/random.4.html)
+
+* [https://unix.stackexchange.com/questions/324209/when-to-use-dev-random-vs-dev-urandom](https://unix.stackexchange.com/questions/324209/when-to-use-dev-random-vs-dev-urandom)
+
+* Answer: 
+
+According to the two before mentioned links, /dev/random and /dev/urandom are using the same Cryptographically secure pseudorandom number generator (CSPRNG). The only difference between these two is that /dev/random blocks when it runs out of entropy (halts processes execution) and /dev/urandom will never block. Most of the time you should use /dev/urandom. There is only one rare case where /dev/random should be used when shortly after boot on a low entropy device and the entropy pool has not been seeded properly yet.

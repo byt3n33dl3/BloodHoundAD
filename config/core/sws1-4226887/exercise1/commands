@@ -1,0 +1,5 @@
+mkdir sws1-4226887
+mkdir sws1-4226887/exercise1 sws1-4226887/exercise2 sws1-4226887/exercise3
+echo 'Christoph Schmidl, s4226887, c.schmidl@student.ru.nl' > sws1-4226887/names.txt
+du -sb sws1-4226887
+du -sb sws1-4226887/ | awk '{print $1}' > sws1-4226887/exercise1/1b.txt

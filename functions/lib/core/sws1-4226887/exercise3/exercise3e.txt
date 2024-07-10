@@ -1,0 +1,6 @@
+I used a simple loop in bash. I execute the exercise3d program and pipe
+its output to the wc command (word count) with the -l flag. This
+flag counts the number of lines. After that I create the exercise3d.txt
+file on the fly and append the output from wc in every iteration.
+
+# for run in {1..10}; do ./exercise3d | wc -l >> exercise3d.txt; done

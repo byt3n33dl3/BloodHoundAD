@@ -1,0 +1,10 @@
+Length of r: 9
+Length of a: 9
+Length of b: 9
+Elements of array a: 1 2 3 4 5 6 7 8 9 
+Elements of array b: 9 8 7 6 5 4 3 2 1 
+Elements of array r: 0 0 0 0 0 0 0 0 0 
+Executing addvector function...
+Elements of array r: 10 10 10 10 10 10 10 10 10 
+Memcmp between test and TEST results in: 1
+Memcmp_backwards between test and TEST results in: 1

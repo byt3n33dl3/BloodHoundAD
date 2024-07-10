@@ -1,0 +1,18 @@
+# tr --delete '\n' < genome.txt | grep -o 'GATTACA'
+GATTACA
+GATTACA
+GATTACA
+GATTACA
+# tr --delete '\n' < genome.txt | grep -o 'GATTACA' | wc -w
+4
+
+Answer:
+
+To fix the problem with newlines interrupting the matching process, the tr command is used (translate or delete characters).
+Tr is reading in the content of genome.txt and is deleting newlines ('\n') in memory. It is therefore no in-place functionality. 
+After removing all newlines, we essentially are left with one long line which we can pipe towards grep. 
+Grep is used for the matching process with the -o flag (--only-matching) which gives us the occurences of a word every 
+time although it might occur several times in the same line. Without the -o flag, grep only prints out matching lines. 
+So, everytime grep finds the pattern, it prints out the pattern in a new line. All we have to to now is counting the occurences 
+which can be done by the wc command (word count) with either the -w flag (words) or -l (lines) flag. In this scenario it does not 
+really matter. The total occurence of the word GATTACA is therefore 4.

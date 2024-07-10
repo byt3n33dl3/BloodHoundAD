@@ -1,0 +1,35 @@
+Size of i (short): 2 bytes
+Size of x (char): 1 bytes
+Size of sn1 (long): 8 bytes
+Size of sn2 (long): 8 bytes
+Size of y (int array): 8 bytes
+
+address             content (hex)       content (dec)       
+------------------------------------------------------------
+0x7fffae2df4ca       0x34                   52                  
+0x7fffae2df4cb       0x12                   18                  
+0x7fffae2df4c9       0xffffff81             4294967169          
+0x7fffae2df4d0       0x47                   71                  
+0x7fffae2df4d1       0x7f                   127                 
+0x7fffae2df4d2       0x40                   64                  
+0x7fffae2df4d3       0x0                    0                   
+0x7fffae2df4d4       0x0                    0                   
+0x7fffae2df4d5       0x0                    0                   
+0x7fffae2df4d6       0x0                    0                   
+0x7fffae2df4d7       0x0                    0                   
+0x7fffae2df4d8       0x47                   71                  
+0x7fffae2df4d9       0x7f                   127                 
+0x7fffae2df4da       0x40                   64                  
+0x7fffae2df4db       0x0                    0                   
+0x7fffae2df4dc       0x0                    0                   
+0x7fffae2df4dd       0x0                    0                   
+0x7fffae2df4de       0x0                    0                   
+0x7fffae2df4df       0x0                    0                   
+0x7fffae2df4e0       0x44                   68                  
+0x7fffae2df4e1       0x33                   51                  
+0x7fffae2df4e2       0x22                   34                  
+0x7fffae2df4e3       0x11                   17                  
+0x7fffae2df4e4       0x11                   17                  
+0x7fffae2df4e5       0x22                   34                  
+0x7fffae2df4e6       0x33                   51                  
+0x7fffae2df4e7       0x44                   68                  

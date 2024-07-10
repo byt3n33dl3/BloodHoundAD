@@ -1,0 +1,39 @@
+The program crashes with an "invalid next size" error because
+the heap has been corrupted and free is facing corrupted or
+or invalid data entries.
+
+
+*** Error in `./exercise2': free(): invalid next size (fast): 0x0000000001253010 ***
+======= Backtrace: =========
+/lib/x86_64-linux-gnu/libc.so.6(+0x777e5)[0x7fb7feeba7e5]
+/lib/x86_64-linux-gnu/libc.so.6(+0x8037a)[0x7fb7feec337a]
+/lib/x86_64-linux-gnu/libc.so.6(cfree+0x4c)[0x7fb7feec753c]
+./exercise2[0x4007d0]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf0)[0x7fb7fee63830]
+./exercise2[0x400579]
+======= Memory map: ========
+00400000-00401000 r-xp 00000000 00:91 7998324                            /home/cschmidl/study/hacking_in_c/hackingc-assignment4-s4226887/exercise2
+00600000-00601000 r--p 00000000 00:91 7998324                            /home/cschmidl/study/hacking_in_c/hackingc-assignment4-s4226887/exercise2
+00601000-00602000 rw-p 00001000 00:91 7998324                            /home/cschmidl/study/hacking_in_c/hackingc-assignment4-s4226887/exercise2
+01253000-01274000 rw-p 00000000 00:00 0                                  [heap]
+7fb7f8000000-7fb7f8021000 rw-p 00000000 00:00 0
+7fb7f8021000-7fb7fc000000 ---p 00000000 00:00 0
+7fb7fec2d000-7fb7fec43000 r-xp 00000000 fc:00 2621505                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7fb7fec43000-7fb7fee42000 ---p 00016000 fc:00 2621505                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7fb7fee42000-7fb7fee43000 rw-p 00015000 fc:00 2621505                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7fb7fee43000-7fb7ff003000 r-xp 00000000 fc:00 2622462                    /lib/x86_64-linux-gnu/libc-2.23.so
+7fb7ff003000-7fb7ff203000 ---p 001c0000 fc:00 2622462                    /lib/x86_64-linux-gnu/libc-2.23.so
+7fb7ff203000-7fb7ff207000 r--p 001c0000 fc:00 2622462                    /lib/x86_64-linux-gnu/libc-2.23.so
+7fb7ff207000-7fb7ff209000 rw-p 001c4000 fc:00 2622462                    /lib/x86_64-linux-gnu/libc-2.23.so
+7fb7ff209000-7fb7ff20d000 rw-p 00000000 00:00 0
+7fb7ff20d000-7fb7ff233000 r-xp 00000000 fc:00 2622457                    /lib/x86_64-linux-gnu/ld-2.23.so
+7fb7ff3ea000-7fb7ff3ed000 rw-p 00000000 00:00 0
+7fb7ff431000-7fb7ff432000 rw-p 00000000 00:00 0
+7fb7ff432000-7fb7ff433000 r--p 00025000 fc:00 2622457                    /lib/x86_64-linux-gnu/ld-2.23.so
+7fb7ff433000-7fb7ff434000 rw-p 00026000 fc:00 2622457                    /lib/x86_64-linux-gnu/ld-2.23.so
+7fb7ff434000-7fb7ff435000 rw-p 00000000 00:00 0
+7ffda06d7000-7ffda06f8000 rw-p 00000000 00:00 0                          [stack]
+7ffda074a000-7ffda074d000 r--p 00000000 00:00 0                          [vvar]
+7ffda074d000-7ffda074f000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+Aborted

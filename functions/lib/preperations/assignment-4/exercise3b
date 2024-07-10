@@ -1,0 +1,12 @@
+The main problem is due to the two free commands at the very end.
+Because m and mt are multidimensional arrays (arrays of arrays),
+the free command only frees the allocated memory of the first dimension
+but not the contained arrays on the second dimensions. This leads 
+to a memory leak and after enough iterations this program would 
+probably end with a return result of -1 because malloc is not able 
+to allocate any more memory based on the memory leak.
+
+A simple solution would be to iterate through the first dimension of
+the array and then free any contained array on the second dimension
+separately. At the very end, the outer array itself can be freed.
+The fix is contained in a separate function in exercise3.c.

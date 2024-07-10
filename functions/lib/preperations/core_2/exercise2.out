@@ -1,0 +1,6 @@
+Size of bool: 1 bytes
+Hex representation of true bool: 0x1
+Hex representation of false bool 0x0
+true_bool is set to 0x2: true
+false_bool is set to 0x443322: true
+false_bool is set to 0x0: false

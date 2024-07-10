@@ -1,0 +1,54 @@
+Taken from the documentation: 
+
+p The argument shall be a pointer to void. 
+The value of the pointer is converted to a sequence of printing characters, 
+in an implementation-defined manner.
+
+%p - void pointer
+
+
+printf("%p\n", x);
+
+The very first call to printf is trying to print a pointer value and gets x as the argument. 
+x is an array and decays to the pointer value of the first element in the array in the context of printf.
+Let's assume this address is 0x7fffb3cc3b20.
+
+
+a)
+printf("%p\n", &x);
+
+&x is a more explicit form to get the pointer address of x. This actually prints
+the same value as the first printf statement. Therefore 0x7fffb3cc3b20.
+
+b)
+printf("%p\n", x+1);
+
+x decays into a pointer value to the first element in this context. The +1 statement is doing pointer arithmetic by incrementing
+the address of x by 1 * sizeof(int32_t) which are 4 bytes. Therefore the address is 0x7fffb3cc3b20 + 4 = 0x7fffb3cc3b24.
+
+c)
+printf("%p\n", &x+1);
+
+As &x is a pointer to an array with 4 elements of size int32_t, this pointer arithmetic will
+increment the pointer by 4 * sizeof(int32_t) = 0x7fffb3ccb20 + 16 = 0x7fffb3ccb30.
+
+d)
+printf("%d\n", *x);
+
+*x is dereferencing the pointer to the first element of x which gets the value of the
+first element of x which is 23. Therefore the output is 23.
+
+e)
+printf("%d\n", *x+x[2]);
+
+*x is dereferencing the pointer to the first element of x and gets us 23.
+x[2] is giving us the value of the third element in the array x which is 5.
+In the end we get 23 + 5 which is 28. Therefore the output is 28.
+
+f)
+printf("%d\n", *x+*(x+3));
+
+*x is getting us the first element of array x which is 23. (x+3) is performing pointer arithmetic by incrementing the
+pointer to the first value of x by doing 0x7fffb3ccb20 + 3 * sizeof(int32_t) which is 0x7fffb3ccb2c.
+0x7fffb3ccb2c is the address of the fourth array element and the dereferencing operator gives us the actual
+value which is (1<<7) which is 128. In the end we get 23 + 128 = 151.

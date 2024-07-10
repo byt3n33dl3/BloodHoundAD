@@ -1,0 +1,4 @@
+I was not able to finish this exercise in time.
+I probably had to use gdb's breakpoint functionality
+to browse through different sections of the binary
+to see what the program actually does.
