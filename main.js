@@ -17,7 +17,7 @@ function createWindow() {
         mainWindow = new BrowserWindow({
             width: 1280,
             height: 800,
-            icon: __dirname + '/src/bin/common/bloodhoundad.png',
+            icon: __dirname + '/src/img/icon.png',
             webPreferences: {
                 nodeIntegration: true,
                 enableRemoteModule: true,
