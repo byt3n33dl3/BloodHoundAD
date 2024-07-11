@@ -44,4 +44,4 @@ Custom bloodhound by: pxcs - gangstacrew
 
 ## Active Directory
 
-BloodHound Enterprise has an attack Path Management solution that continuously maps and quantifies Active Directory Attack Paths. You can remove millions, even billions of Attack Paths within your existing architecture and eliminate the attacker’s easiest, most reliable, and most attractive techniques.
+BloodHound `Enterprise` has an attack Path Management solution that continuously maps and quantifies Active Directory Attack Paths. You can remove millions, even billions of Attack Paths within your existing architecture and eliminate the attacker’s easiest, most reliable, and most attractive techniques.
